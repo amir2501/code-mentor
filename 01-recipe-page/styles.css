@@ -3,7 +3,8 @@ body {
 }
 p,
 li,
-.grid {
+.grid,
+table {
   font-size: 16px;
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
@@ -21,7 +22,8 @@ h2 {
   font-weight: 400;
   font-style: normal;
   padding-top: 1rem;
-  font-size: 2em;
+  font-size: 1.3em;
+  padding-bottom: 0.5rem;
 }
 
 h1 {
@@ -29,15 +31,12 @@ h1 {
   font-weight: 500;
   color: #302f2d;
   padding-top: 0px;
-  margin: 2rem 0rem 1rem 0rem;
+  margin: 2rem 0rem 0rem 0rem;
 }
 
-hr {
-  color: hsl(30, 18%, 87%);
-  width: 100%;
-  size: 10px;
+.padding-top {
+  margin-top: 0.5rem;
 }
-
 /* purpish background */
 .purple-background {
   background-color: #fff7fc;
@@ -47,6 +46,7 @@ hr {
 }
 .under-line {
   border-bottom: 0.1rem solid hsl(30, 18%, 87%);
+  padding-bottom: 1.5rem;
 }
 ul,
 ol {
@@ -107,7 +107,7 @@ p {
 
 ul,
 ol {
-  padding-left: 0.4rem;
+  padding-left: 1rem;
   margin: 0.5rem;
 }
 /* container */
@@ -147,7 +147,39 @@ ol {
 }
 /* li {
 } */
+table {
+  /* padding-left: 1.5rem; */
+  margin-top: 0rem;
+  width: 100%;
+  margin: 0rem;
+  border-spacing: 0px;
+}
+.padding-left {
+  padding-left: 5rem;
+}
+tr.under-line td {
+  border-bottom: 0.1rem solid hsl(30, 18%, 87%);
+  padding: 0rem;
+  margin: 0rem;
+}
+td,
+tr.under-line > td {
+  padding-left: 2rem;
+}
+td > p {
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+/* .no-marker {
+  list-style-type: none;
+} */
+/* .flex {
+  display: flexbox;
+} */
 
+li {
+  font-size: 1em;
+}
 @media (max-width: 480px) {
   body {
     margin: 0px;
