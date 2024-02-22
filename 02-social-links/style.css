@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: content-box; */
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+  transition: all 0.2s;
+}
+article {
+  display: flex;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.logo {
+  display: block;
+  width: 100px;
+  border-radius: 50%;
+  margin: 0.5rem auto;
+  margin-bottom: 1.5rem;
+}
+li {
+  list-style: none;
+  background-color: hsl(0, 0%, 20%);
+  color: hsl(0, 0%, 100%);
+  padding: 0.8rem 2.5rem;
+  border-radius: 0.5rem;
+  width: 15rem;
+}
+li:hover {
+  background-color: hsl(75, 94%, 57%);
+  color: hsl(0, 0%, 8%);
+}
+ul {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+/* a {
+  display: grid;
+  width: 100%;
+  margin: 0.5rem auto;
+  padding: 1rem;
+  border: none;
+} */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #141414;
+}
+
+/* .container {
+  width: 30%;
+  background-color: #1f1f1f;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+.container {
+  background-color: hsl(0, 0%, 12%);
+  color: hsl(0, 0%, 100%);
+  display: flexbox;
+  justify-content: center;
+  max-width: 25rem;
+  width: 100%;
+  padding: 2rem 2.5rem;
+  border-radius: 1rem;
+}
+.container > * {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+h3,
+h2 {
+  font-size: 14px;
+  color: rgb(163, 163, 163);
+  font-weight: 400;
+}
+h1 {
+  margin-bottom: 0.5rem;
+  font-size: 1.7rem;
+}
+.green-text {
+  color: hsl(75, 94%, 57%);
+  margin-top: 0.4rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+/* for large phones like samsung ultra or iphone pro max phones */
+@media (max-width: 480px) and (min-width: 426px) {
+  .container {
+    margin: 0em 2.5em 2em 2.5em;
+    padding: 1rem 1.5rem;
+  }
+  body {
+    margin: 0rem;
+  }
+  .logo {
+    margin-top: 0.5rem;
+  }
+  * {
+    transition: all 0.3s;
+  }
+}
+/* for phones like iphone 12 (medium size)  */
+
+@media (max-width: 425px) and (min-width: 390px) {
+  .container {
+    margin: 0rem 2.5em 2em 2.5em;
+    padding: 1rem 1.5rem;
+  }
+  body {
+    margin: 0rem;
+  }
+  .logo {
+    margin-top: 0.5rem;
+  }
+  * {
+    transition: all 0.3s;
+  }
+}
+/* small phones like iphone se */
+@media (min-width: 0px) and (max-width: 389px) {
+  .container {
+    margin: 2em 1.5em 2em 1.5em;
+    padding: 1rem 1.5rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 0.8rem;
+  }
+  .green-text {
+    font-size: 0.9rem;
+  }
+  body {
+    margin: 0rem;
+  }
+  .logo {
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  * {
+    transition: all 0.3s;
+  }
+}
+/* for 4k monitors */
+@media (min-width: 2560px) {
+  .container {
+    margin: 0em 50em 20em 50em;
+    padding: 2rem 4rem;
+    max-width: 100rem;
+    border-radius: 2rem;
+    max-width: 30rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  body {
+    margin: 0rem;
+  }
+  .green-text {
+    font-size: 1.6rem;
+  }
+  .logo {
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    width: auto;
+  }
+  * {
+    transition: all 0.3s;
+  }
+  a {
+    font-size: 1.4rem;
+    /* margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 1.5rem; */
+  }
+}
+/* for tablets */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .container {
+    margin: 13em 14em;
+    padding: 1rem 1.5rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  body {
+    margin: 0rem;
+  }
+  .logo {
+    margin-top: 0.5rem;
+    width: 5rem;
+  }
+  * {
+    transition: all 0.3s;
+  }
+  button {
+    padding: 0.9rem;
+  }
+  .green-text {
+    font-size: 0.9em;
+  }
+}

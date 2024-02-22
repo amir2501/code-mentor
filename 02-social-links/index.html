@@ -11,6 +11,7 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
+    <link rel="stylesheet" href="./style.css" />
 
     <title>Frontend Mentor | Social links profile</title>
     <!-- link for font -->
@@ -21,203 +22,38 @@
       rel="stylesheet"
     />
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      * {
-        font-family: "Inter", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 500;
-        font-style: normal;
-        font-variation-settings: "slnt" 0;
-        transition: all 0.3s;
-      }
-      body {
-        background-color: hsl(0, 0%, 8%);
-      }
-      .container {
-        background-color: hsl(0, 0%, 12%);
-        color: hsl(0, 0%, 100%);
-        display: flexbox;
-        justify-content: center;
-        max-width: 20rem;
-        margin: 250px auto;
-        padding: 1rem 2.5rem 2rem 2.5rem;
-        border-radius: 1rem;
-      }
-      .container > * {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-      }
-      .green-text {
-        color: hsl(75, 94%, 57%);
-        margin-top: 0.6rem;
-        margin-bottom: 1.5rem;
-        font-size: 1rem;
-        font-weight: 500;
-      }
-      .logo {
-        display: block;
-        width: 100px;
-        border-radius: 50%;
-        margin: 1rem auto;
-        margin-bottom: 1.5rem;
-      }
-      button {
-        display: block;
-        width: 100%;
-        margin: 0.5rem auto;
-        padding: 1rem;
-        border: none;
-        background-color: hsl(0, 0%, 20%);
-        color: hsl(0, 0%, 100%);
-        border-radius: 0.5rem;
-        font-weight: 700;
-        font-size: 0.9rem;
-      }
-      button:hover {
-        background-color: hsl(75, 94%, 57%);
-        color: hsl(0, 0%, 8%);
-      }
-      a {
-        text-decoration: none;
-      }
-      p {
-        font-size: 14px;
-        color: rgb(163, 163, 163);
-        font-weight: 400;
-      }
-      h1 {
-        margin-bottom: 0.5rem;
-        font-size: 1.7rem;
-      }
-      /* for large phones like samsung ultra or iphone pro max phones */
-      @media (max-width: 480px) and (min-width: 426px) {
-        .container {
-          margin: 10em 2.5em 2em 2.5em;
-          padding: 1rem 1.5rem;
-        }
-        body {
-          margin: 0rem;
-        }
-        .logo {
-          margin-top: 0.5rem;
-        }
-        * {
-          transition: all 0.3s;
-        }
-      }
-      /* for phones like iphone 12 (medium size)  */
-
-      @media (max-width: 425px) and (min-width: 390px) {
-        .container {
-          margin: 9rem 2.5em 2em 2.5em;
-          padding: 1rem 1.5rem;
-        }
-        body {
-          margin: 0rem;
-        }
-        .logo {
-          margin-top: 0.5rem;
-        }
-        * {
-          transition: all 0.3s;
-        }
-      }
-      /* small phones like iphone se */
-      @media (min-width: 0px) and (max-width: 389px) {
-        .container {
-          margin: 2em 1.5em 2em 1.5em;
-          padding: 1rem 1.5rem;
-        }
-        h1 {
-          font-size: 1.5rem;
-        }
-        body {
-          margin: 0rem;
-        }
-        .logo {
-          margin-top: 0.5rem;
-          margin-bottom: 1.5rem;
-        }
-        * {
-          transition: all 0.3s;
-        }
-      }
-      /* for 4k monitors */
-      @media (min-width: 2560px) {
-        .container {
-          margin: 20em 50em 20em 50em;
-          padding: 5rem 8rem;
-          max-width: 100rem;
-          border-radius: 2rem;
-        }
-        h1 {
-          font-size: 4rem;
-        }
-        p {
-          font-size: 2rem;
-        }
-        body {
-          margin: 0rem;
-        }
-        .green-text {
-          font-size: 2rem;
-        }
-        .logo {
-          margin-top: 0.5rem;
-          margin-bottom: 1.5rem;
-          width: auto;
-        }
-        * {
-          transition: all 0.3s;
-        }
-        button {
-          font-size: 2rem;
-          margin-bottom: 2rem;
-          padding: 2rem;
-          border-radius: 1.5rem;
-        }
-      }
-      /* for tablets */
-      @media (max-width: 1024px) and (min-width: 768px) {
-        .container {
-          margin: 13em 14em;
-          padding: 1rem 1.5rem;
-        }
-        h1 {
-          font-size: 1.5rem;
-        }
-        body {
-          margin: 0rem;
-        }
-        .logo {
-          margin-top: 0.5rem;
-          width: 5rem;
-        }
-        * {
-          transition: all 0.3s;
-        }
-        button {
-          padding: 0.9rem;
-        }
-        .green-text {
-          font-size: 0.9em;
-        }
-      }
-    </style>
   </head>
   <body>
-    <div class="container">
-      <img src="./assets/images/avatar-jessica.jpeg" alt="logo" class="logo" />
-      <h1>Jessica Randall</h1>
-      <p class="green-text">London, United Kingdom</p>
-      <p>"Front-end developer and avid reader."</p>
-
-      <a href="#"><button>GitHub</button></a>
-      <a href="#"><button>Frontend Mentor</button></a>
-      <a href="#"><button>LinkedIn</button></a>
-      <a href="#"><button>Twitter</button></a>
-      <a href="#"><button>Instagram</button></a>
-    </div>
+    <article>
+      <div class="container">
+        <div class="divvf">
+          <img
+            src="./assets/images/avatar-jessica.jpeg"
+            alt="logo"
+            class="logo"
+          />
+        </div>
+        <h1>Jessica Randall</h1>
+        <h2 class="green-text">London, United Kingdom</h2>
+        <h2>"Front-end developer and avid reader."</h2>
+        <ul>
+          <li>
+            <a href="#">GitHub</a>
+          </li>
+          <li>
+            <a href="#">Frontend Mentor</a>
+          </li>
+          <li>
+            <a href="#">LinkedIn</a>
+          </li>
+          <li>
+            <a href="#">Twitter</a>
+          </li>
+          <li>
+            <a href="#">Instagram</a>
+          </li>
+        </ul>
+      </div>
+    </article>
   </body>
 </html>
