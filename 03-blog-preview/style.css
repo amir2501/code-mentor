@@ -4,38 +4,59 @@
   font-style: normal;
   font-size: 16px;
   transition: all 0.2s;
+  margin: 0px;
+  padding: 0px;
+}
+li {
+  list-style-type: none;
+  margin: 6% 1%;
+}
+time {
+  margin: 5% 1%;
 }
 .yellow-background {
   background-color: hsl(47, 88%, 63%);
 }
+article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 .black-text {
   width: fit-content;
-  padding: 10px;
+  padding: 2% 3%;
   border-radius: 5px;
+}
+li {
+  margin: 6% 0%;
 }
 .card {
   background-color: white;
   border: 0.1rem solid hsl(0, 0%, 7%);
   border-radius: 20px;
-  display: flexbox;
-  justify-content: center;
-  max-width: 350px;
-  margin: 250px auto;
-  padding: 1.5rem;
+  max-width: 20rem;
+  padding: 1.4rem;
+  padding-bottom: 0rem;
   box-shadow: 0.6rem 0.6rem hsl(0, 0%, 7%);
 }
 .grey-text {
   color: hsl(0, 0%, 50%);
+  line-height: 1.5;
+  margin: 0% 1%;
 }
 .bold {
-  font-weight: 700;
+  font-weight: 800;
+  margin: 5% 1%;
 }
 .illustration {
   width: 100%;
-  border-radius: 20px;
+  border-radius: 1rem;
 }
 h1 {
   font-size: 1.5em;
+  font-weight: 900;
+  margin: 5% 1%;
 }
 h1:hover {
   color: hsl(47, 88%, 63%);
@@ -51,7 +72,7 @@ h1:hover {
 }
 .inline {
   display: flex;
-  width: 100%;
+  margin: 5% 0%;
 }
 .small-p {
   font-size: 0.9rem;
