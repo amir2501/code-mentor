@@ -8,15 +8,9 @@
   font-variation-settings: "slnt" 0;
   transition: all 0.2s;
   flex-direction: column;
-  justify-content: center;
-  text-align: center;
 }
 
-article {
-  display: inline-flex;
-}
-
-a {
+article a {
   text-decoration: none;
   color: inherit;
   font-weight: 700;
@@ -37,7 +31,6 @@ li {
   color: hsl(0, 0%, 100%);
   padding: 0.8rem 2.5rem;
   border-radius: 0.5rem;
-  width: 15rem;
   margin-top: 1rem;
 }
 
@@ -50,6 +43,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   min-height: 100vh;
   background-color: #141414;
 }
@@ -57,23 +51,18 @@ body {
 .container {
   background-color: hsl(0, 0%, 12%);
   color: hsl(0, 0%, 100%);
-  max-width: 25rem;
   padding: 2rem 2.5rem;
   border-radius: 1rem;
 }
 
-.container > * {
-  display: flex;
-}
-
-p,
+article p,
 address {
   font-size: 14px;
   color: rgb(163, 163, 163);
   font-weight: 400;
 }
 
-h1 {
+article h1 {
   margin-bottom: 0.5rem;
   font-size: 1.7rem;
 }
