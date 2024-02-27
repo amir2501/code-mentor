@@ -7,31 +7,42 @@
   margin: 0px;
   padding: 0px;
 }
-li {
+article > ul > li {
   list-style-type: none;
   margin: 6% 1%;
+  padding: 2% 3%;
+  border-radius: 5px;
 }
-time {
+
+body > ul {
+  gap: 30px;
+  display: flex;
+  max-width: 90%;
+}
+
+article ul {
+  display: flex;
+  gap: 10px;
+  max-width: 100em;
+}
+li {
+  list-style-type: none;
+}
+article time {
   margin: 5% 1%;
 }
-.yellow-background {
+body,
+li {
   background-color: hsl(47, 88%, 63%);
 }
-article {
+body {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
-.black-text {
-  width: fit-content;
-  padding: 2% 3%;
-  border-radius: 5px;
-}
-li {
-  margin: 6% 0%;
-}
-.card {
+
+article {
   background-color: white;
   border: 0.1rem solid hsl(0, 0%, 7%);
   border-radius: 20px;
@@ -40,16 +51,17 @@ li {
   padding-bottom: 0rem;
   box-shadow: 0.6rem 0.6rem hsl(0, 0%, 7%);
 }
-.grey-text {
+article > p {
   color: hsl(0, 0%, 50%);
   line-height: 1.5;
   margin: 0% 1%;
 }
-.bold {
+article li,
+.inline > p {
   font-weight: 800;
   margin: 5% 1%;
 }
-.illustration {
+article > img {
   width: 100%;
   border-radius: 1rem;
 }
@@ -61,10 +73,10 @@ h1 {
 h1:hover {
   color: hsl(47, 88%, 63%);
 }
-.card:hover:active {
+article:hover:active {
   box-shadow: 1rem 1rem hsl(0, 0%, 7%);
 }
-.avatar {
+.inline > img {
   width: 2em;
   height: 2em;
   margin-right: 0.5em;
@@ -74,104 +86,6 @@ h1:hover {
   display: flex;
   margin: 5% 0%;
 }
-.small-p {
+time {
   font-size: 0.9rem;
-}
-/* mediun size phones like iphone 12, 13 (medium size phone screens) */
-@media (max-width: 425px) and (min-width: 390px) {
-  .card {
-    margin: 12rem 2.5rem;
-    padding: 20px;
-    max-width: 20em;
-  }
-  .avatar {
-    margin-right: 10px;
-  }
-  .inline {
-    display: grid;
-    grid-template-columns: 0.2fr 1fr;
-  }
-  body {
-    margin: 0px;
-  }
-  h1 {
-    font-size: 1.4em;
-  }
-  p {
-    font-size: 0.85em;
-  }
-  .avatar {
-    height: 2rem;
-    width: 2rem;
-    margin-top: 0.25em;
-  }
-}
-/* for phones like iphone se with small screen */
-@media (min-width: 0px) and (max-width: 389px) {
-  .card {
-    margin: 6rem 1.5rem;
-    padding: 1.2rem;
-  }
-  h1 {
-    font-size: 1.4em;
-  }
-  p {
-    font-size: 0.8em;
-  }
-  .avatar {
-    height: 2rem;
-    width: 2rem;
-    margin-top: 0.25em;
-  }
-}
-/* for phones like samsung s series and iphone pro max screens (large screens) */
-@media (max-width: 480px) and (min-width: 426px) {
-  .card {
-    margin: 14rem 4rem;
-    padding: 1rem;
-    max-width: 20em;
-  }
-  h1 {
-    font-size: 1.3em;
-  }
-  p {
-    font-size: 0.8em;
-  }
-  .avatar {
-    height: 2rem;
-    width: 2rem;
-    margin-top: 0.25em;
-    margin-right: 0.5em;
-  }
-}
-/* for 4k monitors */
-@media (min-width: 2560px) {
-  .card {
-    margin: 20em 50em 20em 50em;
-    padding: 3rem;
-    max-width: 100rem;
-    border-radius: 2rem;
-    max-width: 50rem;
-  }
-  h1 {
-    font-size: 4rem;
-  }
-  p {
-    font-size: 2.3rem;
-  }
-  body {
-    margin: 0rem;
-  }
-  .inline > .bold {
-    font-size: 2rem;
-  }
-  .avatar {
-    width: 4rem;
-    height: 4rem;
-    margin-top: 1.5rem;
-    margin-right: 1.5rem;
-  }
-  * {
-    transition: all 0.3s;
-  }
 }
