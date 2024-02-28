@@ -10,35 +10,6 @@
   flex-direction: column;
 }
 
-article a {
-  text-decoration: none;
-  color: inherit;
-  font-weight: 700;
-  font-size: 0.9rem;
-}
-
-.avatar {
-  display: block;
-  width: 100px;
-  border-radius: 50%;
-  margin: 0.5rem auto;
-  margin-bottom: 1.5rem;
-}
-
-li {
-  list-style: none;
-  background-color: hsl(0, 0%, 20%);
-  color: hsl(0, 0%, 100%);
-  padding: 0.8rem 2.5rem;
-  border-radius: 0.5rem;
-  margin-top: 1rem;
-}
-
-li:hover {
-  background-color: hsl(75, 94%, 57%);
-  color: hsl(0, 0%, 8%);
-}
-
 body {
   display: flex;
   justify-content: center;
@@ -48,26 +19,27 @@ body {
   background-color: #141414;
 }
 
-.container {
+.profile-card {
   background-color: hsl(0, 0%, 12%);
   color: hsl(0, 0%, 100%);
   padding: 2rem 2.5rem;
   border-radius: 1rem;
 }
 
-article p,
-address {
-  font-size: 14px;
-  color: rgb(163, 163, 163);
-  font-weight: 400;
+.profile-card img {
+  display: block;
+  width: 100px;
+  border-radius: 50%;
+  margin: 0.5rem auto;
+  margin-bottom: 1.5rem;
 }
 
-article h1 {
+.profile-card h1 {
   margin-bottom: 0.5rem;
   font-size: 1.7rem;
 }
 
-.green-text {
+.profile-card > address {
   color: hsl(75, 94%, 57%);
   margin-top: 0.4rem;
   margin-bottom: 1.5rem;
@@ -75,63 +47,29 @@ article h1 {
   font-weight: 500;
 }
 
-/* small phones like iphone se */
-@media (min-width: 0px) and (max-width: 389px) {
-  .container {
-    padding: 1rem 1.5rem;
-  }
-  li {
-    width: 12rem;
-  }
+.profile-card p {
+  font-size: 14px;
+  color: rgb(163, 163, 163);
+  font-weight: 400;
 }
 
-/* for phones like iphone 12 (medium size)  */
-@media (max-width: 425px) and (min-width: 390px) {
-  .container {
-    padding: 1rem 1.5rem;
-  }
-  li {
-    width: 13rem;
-  }
+.profile-card li {
+  list-style: none;
+  background-color: hsl(0, 0%, 20%);
+  color: hsl(0, 0%, 100%);
+  padding: 0.8rem 2.5rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
 }
 
-/* for large phones like samsung ultra or iphone pro max phones */
-@media (max-width: 480px) and (min-width: 426px) {
-  .container {
-    padding: 1rem 1.5rem;
-  }
-  li {
-    width: 13rem;
-  }
+.profile-card li:hover {
+  background-color: hsl(75, 94%, 57%);
+  color: hsl(0, 0%, 8%);
 }
 
-/* for 4k monitors */
-@media (min-width: 2560px) {
-  .container {
-    padding: 2rem 4rem;
-    border-radius: 2rem;
-    max-width: 30rem;
-  }
-  h1 {
-    font-size: 2.5rem;
-  }
-  p {
-    font-size: 1.5rem;
-  }
-
-  .green-text {
-    font-size: 1.6rem;
-  }
-  .avatar {
-    margin-top: 0.5rem;
-    margin-bottom: 1.5rem;
-    width: auto;
-  }
-
-  a {
-    font-size: 1.4rem;
-  }
-  li {
-    width: 25em;
-  }
+.profile-card a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 700;
+  font-size: 0.9rem;
 }
