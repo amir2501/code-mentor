@@ -1,0 +1,92 @@
+* {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 16px;
+  transition: all 0.2s;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: hsl(47, 88%, 63%);
+}
+
+.card {
+  background-color: white;
+  border: 0.1rem solid hsl(0, 0%, 7%);
+  border-radius: 20px;
+  max-width: 20rem;
+  padding: 1.4rem;
+  padding-bottom: 0rem;
+  box-shadow: 0.6rem 0.6rem hsl(0, 0%, 7%);
+}
+
+.card:hover:active {
+  box-shadow: 1rem 1rem hsl(0, 0%, 7%);
+}
+
+.card h1 {
+  font-size: 1.5em;
+  font-weight: 900;
+  margin: 5% 1%;
+}
+.card h1:hover {
+  color: hsl(47, 88%, 63%);
+}
+
+.card > img:first-child {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.card > img:last-of-type {
+  width: 2em;
+  height: 2em;
+  margin-right: 0.5em;
+  margin-top: 0.5em;
+  display: flex;
+  float: left;
+  margin: 1.5rem 0.7rem 1.5rem 0rem;
+}
+
+.card time {
+  margin: 5% 1%;
+  font-size: 0.9rem;
+}
+
+.card ul {
+  display: flex;
+  gap: 10px;
+  max-width: 100em;
+}
+
+.card > ul > li {
+  list-style-type: none;
+  margin: 6% 1%;
+  padding: 2% 3%;
+  border-radius: 5px;
+  list-style-type: none;
+  background-color: hsl(47, 88%, 63%);
+}
+
+.card li,
+.card > p:last-child {
+  font-weight: 800;
+  margin: 5% 1%;
+}
+
+.card > p:first-of-type {
+  color: hsl(0, 0%, 50%);
+  line-height: 1.5;
+  margin: 0% 1%;
+}
+
+.card > p:last-child {
+  display: flex;
+  margin: 2rem 1rem;
+}
