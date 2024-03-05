@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+  transition: all 0.2s;
+  flex-direction: column;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  background-color: #141414;
+}
+
+.profile-card {
+  background-color: hsl(0, 0%, 12%);
+  color: hsl(0, 0%, 100%);
+  padding: 2rem 2.5rem;
+  border-radius: 1rem;
+}
+
+.profile-card img {
+  display: block;
+  width: 100px;
+  border-radius: 50%;
+  margin: 0.5rem auto;
+  margin-bottom: 1.5rem;
+}
+
+.profile-card h1 {
+  margin-bottom: 0.5rem;
+  font-size: 1.7rem;
+}
+
+.profile-card > address {
+  color: hsl(75, 94%, 57%);
+  margin-top: 0.4rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.profile-card p {
+  font-size: 14px;
+  color: rgb(163, 163, 163);
+  font-weight: 400;
+}
+
+.profile-card li {
+  list-style: none;
+  background-color: hsl(0, 0%, 20%);
+  color: hsl(0, 0%, 100%);
+  padding: 0.8rem 2.5rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.profile-card li:hover {
+  background-color: hsl(75, 94%, 57%);
+  color: hsl(0, 0%, 8%);
+}
+
+.profile-card a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
