@@ -1,6 +1,7 @@
 * {
   margin: 0rem;
   padding: 0rem;
+  transition: all 0.3s;
 }
 
 body {
@@ -30,7 +31,7 @@ body {
   float: left;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
-  height: 42rem;
+  max-height: 42rem;
   margin-right: 3rem;
 }
 .preview-card > img:nth-child(2) {
@@ -99,7 +100,7 @@ body {
 .preview-card a:hover {
   background-color: #1a4031;
 }
-@media (max-width: 640px) {
+@media (max-width: 865px) {
   .preview-card > img:first-of-type {
     display: none;
   }
