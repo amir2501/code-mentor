@@ -1,3 +1,10 @@
+:root {
+  --cream: hsl(30, 38%, 92%);
+  --ligntGrey: hsl(228, 12%, 48%);
+  --green: hsl(158, 36%, 37%);
+  --white: hsl(0, 0%, 100%);
+}
+
 * {
   margin: 0rem;
   padding: 0rem;
@@ -5,156 +12,167 @@
 }
 
 body {
-  background-color: hsl(30, 38%, 92%);
+  background-color: var(--cream);
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
+
 .preview-card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--white);
   border-radius: 1rem;
-  max-width: 53rem;
+  max-width: 55rem;
   font-family: "Fraunces", serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
   font-variation-settings: "SOFT" 0, "WONK" 0;
-  padding-right: 2rem;
-}
-.preview-card h1 {
-  font-size: 3rem;
-  line-height: 1;
+  display: flex;
+  gap: 3rem;
 }
 
-.preview-card > img:first-child {
-  float: left;
+.text {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 2.5rem 0rem 0rem;
+}
+
+.preview-card .text h1 {
+  font-size: 3rem;
+  line-height: 1;
+  max-width: 20rem;
+}
+
+.preview-card > .img > img {
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
   max-height: 42rem;
-  margin-right: 3rem;
+  display: block;
 }
-.preview-card > img:nth-child(2) {
-  display: none;
-}
-.preview-card p {
-  color: hsl(228, 12%, 48%);
-  margin: 3rem;
+
+.preview-card .text p {
+  color: var(--ligntGrey);
   font-size: 14px;
 }
-.preview-card p:first-of-type {
+
+.preview-card .text p:first-of-type {
   letter-spacing: 0.5rem;
   margin-bottom: 1.8rem;
   text-transform: uppercase;
+  margin-left: 0px;
+  font-size: 1.2rem;
 }
-.preview-card p:last-of-type {
+
+.preview-card .text p:last-of-type {
   line-height: 1.6;
-  margin-right: 0rem;
   font-size: 1.3rem;
-  margin-bottom: 2.5rem;
-  margin-top: 2rem;
+  margin: 2rem 0rem 2.5rem 0rem;
 }
-.preview-card p,
-.preview-card span:last-of-type,
-.preview-card a {
+
+.preview-card .text p,
+.preview-card .text del,
+.preview-card .text a {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   font-size: 1.2rem;
 }
-.preview-card .price span:last-of-type {
-  text-decoration: line-through;
-  color: hsl(228, 12%, 48%);
-  display: inline-flex;
-  font-size: 1.2rem;
-  text-align: center;
-  margin-top: 1.3rem;
-}
-.preview-card .price span:first-of-type {
-  color: hsl(158, 36%, 37%);
-  display: inline-flex;
-  margin-right: 2rem;
-  font-size: 3rem;
-}
+
 .preview-card .price {
+  gap: 2rem;
+  align-items: center;
+}
+
+.preview-card .price del {
+  color: var(--ligntGrey);
+  display: inline-flex;
+  text-align: center;
+}
+
+.preview-card .price ins {
+  color: var(--green);
+  display: inline-flex;
+  font-size: 3rem;
+  text-decoration: none;
+}
+
+.preview-card .text .price {
   display: flex;
   margin-bottom: 2rem;
 }
-.preview-card a {
+
+.preview-card .text a {
   text-decoration: none;
-  padding: 1.5rem 5.5rem;
-  background-color: hsl(158, 36%, 37%);
-  color: white;
+  padding: 1.4rem 5.5rem;
+  background-color: var(--green);
+  color: var(--white);
   border-radius: 1rem;
   display: inline-block;
   margin: 1rem 0rem 0rem 0rem;
   font-size: 1.4rem;
+  border: none;
 }
-.preview-card > a > img {
-  max-width: 4rem;
-  max-height: 4rem;
+
+.preview-card > .text > a > img {
   margin-right: 1rem;
-  border-radius: 0%;
 }
+
 .preview-card a:hover {
   background-color: #1a4031;
 }
+
 @media (max-width: 865px) {
-  .preview-card > img:first-of-type {
-    display: none;
-  }
-  .preview-card > img:nth-child(2) {
-    display: inline-block;
-    border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
-  }
   .preview-card {
     max-width: 22rem;
-    display: flex;
     flex-direction: column;
-    padding: 0rem;
     border-radius: 0.5em;
+    gap: 1.8rem;
   }
-  .preview-card h1,
-  .preview-card p,
-  .preview-card .price {
-    margin-left: 2rem;
-    margin-right: 2rem;
-    display: inline;
-  }
-  .preview-card h1 {
-    font-size: 2rem;
-  }
-  .preview-card p:first-of-type {
-    font-size: 14px;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-  }
-  .preview-card p:last-of-type {
-    margin-right: 1.8rem;
-    font-size: 14px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-  .preview-card .price span:first-of-type {
-    font-size: 2rem;
-  }
-  .preview-card .price span:last-of-type {
-    font-size: 1rem;
-  }
-  .preview-card .price {
-    margin-bottom: 1rem;
-  }
-  .preview-card a {
-    text-decoration: none;
-    padding: 1rem 3rem 1rem 2rem;
-    background-color: hsl(158, 36%, 37%);
-    color: white;
-    border-radius: 0.5rem;
+
+  .preview-card .img img {
     display: inline-block;
+    max-width: 22rem;
+    border-radius: 0%;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+
+  .preview-card .text {
+    padding: 0rem 2rem 2rem 2rem;
+  }
+
+  .preview-card .text .price {
+    margin: 0rem;
+  }
+
+  .preview-card .text h1 {
+    font-size: 2rem;
+  }
+
+  .preview-card .text p:first-of-type {
+    font-size: 14px;
+    margin: 0rem 0rem 1rem 0rem;
+  }
+
+  .preview-card .text p:last-of-type {
+    font-size: 14px;
+    margin: 1rem 0rem;
+  }
+
+  .preview-card .price ins {
+    font-size: 2rem;
+  }
+
+  .preview-card .price del {
     font-size: 1rem;
-    margin: 0rem 2rem 2rem 2rem;
+  }
+
+  .preview-card .text a {
+    padding: 1rem 3rem 1rem 2rem;
+    font-size: 1rem;
     text-align: center;
+    border-radius: 0.5rem;
   }
 }
