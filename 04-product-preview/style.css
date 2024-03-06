@@ -1,5 +1,4 @@
 :root {
-  --cream: hsl(30, 38%, 92%);
   --ligntGrey: hsl(228, 12%, 48%);
   --green: hsl(158, 36%, 37%);
   --white: hsl(0, 0%, 100%);
@@ -12,7 +11,7 @@
 }
 
 body {
-  background-color: var(--cream);
+  background-color: hsl(30, 38%, 92%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,25 +22,36 @@ body {
   background-color: var(--white);
   border-radius: 1rem;
   max-width: 55rem;
+  display: flex;
+}
+
+.preview-card .text h1,
+.preview-card .text ins {
   font-family: "Fraunces", serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
   font-variation-settings: "SOFT" 0, "WONK" 0;
-  display: flex;
-  gap: 3rem;
+}
+
+.preview-card .text p,
+.preview-card .text del,
+.preview-card .text a {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .text {
   display: flex;
   flex-direction: column;
-  padding: 3rem 2.5rem 0rem 0rem;
+  padding: 3rem 2.5rem 0rem 3rem;
 }
 
 .preview-card .text h1 {
   font-size: 3rem;
   line-height: 1;
-  max-width: 20rem;
 }
 
 .preview-card > .img > img {
@@ -60,7 +70,6 @@ body {
   letter-spacing: 0.5rem;
   margin-bottom: 1.8rem;
   text-transform: uppercase;
-  margin-left: 0px;
   font-size: 1.2rem;
 }
 
@@ -68,16 +77,6 @@ body {
   line-height: 1.6;
   font-size: 1.3rem;
   margin: 2rem 0rem 2.5rem 0rem;
-}
-
-.preview-card .text p,
-.preview-card .text del,
-.preview-card .text a {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 1.2rem;
 }
 
 .preview-card .price {
@@ -89,6 +88,7 @@ body {
   color: var(--ligntGrey);
   display: inline-flex;
   text-align: center;
+  font-size: 1.2rem;
 }
 
 .preview-card .price ins {
@@ -100,22 +100,23 @@ body {
 
 .preview-card .text .price {
   display: flex;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .preview-card .text a {
+  display: inline-block;
   text-decoration: none;
-  padding: 1.4rem 5.5rem;
   background-color: var(--green);
   color: var(--white);
+  padding: 1.4rem 5.5rem;
   border-radius: 1rem;
-  display: inline-block;
-  margin: 1rem 0rem 0rem 0rem;
   font-size: 1.4rem;
-  border: none;
 }
 
-.preview-card > .text > a > img {
+.preview-card > .text > a > span::before {
+  content: url("./images/icon-cart.svg");
+  width: 1rem;
+  height: 1rem;
   margin-right: 1rem;
 }
 
@@ -128,7 +129,6 @@ body {
     max-width: 22rem;
     flex-direction: column;
     border-radius: 0.5em;
-    gap: 1.8rem;
   }
 
   .preview-card .img img {
@@ -140,11 +140,11 @@ body {
   }
 
   .preview-card .text {
-    padding: 0rem 2rem 2rem 2rem;
+    padding: 1.8rem 2rem;
   }
 
   .preview-card .text .price {
-    margin: 0rem;
+    margin-bottom: 1rem;
   }
 
   .preview-card .text h1 {
@@ -153,7 +153,7 @@ body {
 
   .preview-card .text p:first-of-type {
     font-size: 14px;
-    margin: 0rem 0rem 1rem 0rem;
+    margin-bottom: 1rem;
   }
 
   .preview-card .text p:last-of-type {
