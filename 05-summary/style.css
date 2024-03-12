@@ -1,0 +1,171 @@
+* {
+  margin: 0rem;
+  padding: 0rem;
+  transition: all 0.3s;
+}
+* {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+article .purple-background {
+  background: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+  text-align: center;
+  color: white;
+  max-width: 15rem;
+  padding: 3rem;
+  border-radius: 1rem;
+}
+
+article .purple-background h1 {
+  text-align: center;
+  font-size: 3rem;
+  padding-top: 2rem;
+}
+
+article .purple-background .circle {
+  border-radius: 50%;
+  background: linear-gradient(
+    to bottom,
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
+  );
+  width: 10rem;
+  height: 10rem;
+  margin: 2rem auto;
+}
+
+article .purple-background > p,
+article .purple-background .circle > span {
+  color: #cbc4f7;
+}
+
+article .purple-background > p:first-of-type {
+  font-size: 1.5rem;
+}
+article .purple-background > p:last-of-type {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+}
+
+article .summary {
+  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+article .summary ul li {
+  list-style-type: none;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  padding: 1rem 0.5rem;
+  display: flex;
+  position: relative;
+}
+
+article .summary ul li .score {
+  position: absolute;
+  right: 0.5rem;
+}
+
+article .summary button {
+  display: block;
+  padding: 1.2rem 8rem;
+  background-color: hsl(224, 30%, 27%);
+  color: white;
+  margin: 2rem 0rem;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+}
+
+article .summary p {
+  color: hsl(224, 30%, 27%);
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+article .summary ul li .score span {
+  color: hsl(224, 30%, 27%);
+}
+
+.red-li {
+  background-color: hsla(0, 100%, 67%, 0.4);
+}
+
+.red-li > span::before {
+  content: url("./assets/images/icon-reaction.svg");
+}
+
+.orange-li {
+  background-color: hsla(39, 100%, 56%, 0.4);
+}
+
+.orange-li > span::before {
+  content: url("./assets/images/icon-memory.svg");
+}
+
+.green-li {
+  background-color: hsla(166, 100%, 37%, 0.4);
+}
+
+.green-li > span::before {
+  content: url("./assets/images/icon-verbal.svg");
+}
+
+.blue-li {
+  background-color: hsla(234, 85%, 45%, 0.4);
+}
+
+.blue-li > span::before {
+  content: url("./assets/images/icon-visual.svg");
+}
+
+article {
+  display: flex;
+  box-shadow: 10px 10px 10px hsl(221, 100%, 96%);
+  border-radius: 1rem;
+  max-width: 50rem;
+}
+
+@media (max-width: 860px) {
+  article {
+    flex-direction: column;
+    box-shadow: none;
+    display: flex;
+    width: 100%;
+  }
+  body {
+    align-items: normal;
+  }
+  article .purple-background {
+    max-width: 100%;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+  }
+
+  article .summary ul {
+    padding: 0rem 1rem;
+  }
+
+  article .summary p,
+  article .summary button {
+    margin-left: 1rem;
+  }
+  article .summary button {
+    width: 90%;
+  }
+}
