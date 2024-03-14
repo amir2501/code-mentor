@@ -2,13 +2,13 @@
   margin: 0rem;
   padding: 0rem;
   transition: all 0.3s;
-}
-* {
+
   font-family: "Hanken Grotesk", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
+
 body {
   display: flex;
   justify-content: center;
@@ -16,7 +16,7 @@ body {
   min-height: 100vh;
 }
 
-article .purple-background {
+article .total-score {
   background: linear-gradient(
     to bottom,
     hsl(252, 100%, 67%),
@@ -25,38 +25,48 @@ article .purple-background {
   text-align: center;
   color: white;
   max-width: 15rem;
-  padding: 3rem;
-  border-radius: 1rem;
+  padding: 2rem 3rem;
+  padding-bottom: 3rem;
+  border-radius: 2rem;
 }
 
-article .purple-background h1 {
+article .total-score .circle p {
   text-align: center;
-  font-size: 3rem;
-  padding-top: 2rem;
+  font-size: 4rem;
+  padding-top: 3rem;
+  font-weight: bold;
 }
 
-article .purple-background .circle {
+article .total-score .circle {
   border-radius: 50%;
   background: linear-gradient(
     to bottom,
     hsla(256, 72%, 46%, 1),
     hsla(241, 72%, 46%, 0)
   );
-  width: 10rem;
-  height: 10rem;
+  width: 12rem;
+  height: 12rem;
   margin: 2rem auto;
 }
 
-article .purple-background > p,
-article .purple-background .circle > span {
+article .total-score > h1,
+article .total-score .circle > span,
+article .total-score dl dd {
   color: #cbc4f7;
 }
 
-article .purple-background > p:first-of-type {
+article .total-score > p:first-of-type {
   font-size: 1.5rem;
 }
-article .purple-background > p:last-of-type {
-  margin-top: 2rem;
+
+article .total-score dl dt {
+  display: block;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+article .total-score > dl dd {
+  margin-top: 1rem;
   font-size: 1.1rem;
 }
 
@@ -64,44 +74,78 @@ article .summary {
   padding: 2rem;
   align-items: center;
   justify-content: center;
+  max-width: 20rem;
+  margin: 0rem auto;
+  padding-left: 2.4rem;
+  font-size: 1.1rem;
+}
+
+article .summary ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 article .summary ul li {
   list-style-type: none;
-  margin-top: 1rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   padding: 1rem 0.5rem;
+  padding-left: 1rem;
   display: flex;
   position: relative;
 }
 
 article .summary ul li .score {
+  color: #45404a;
   position: absolute;
   right: 0.5rem;
+  font-weight: bold;
 }
 
 article .summary button {
   display: block;
-  padding: 1.2rem 8rem;
+  padding: 1rem 6rem;
   background-color: hsl(224, 30%, 27%);
   color: white;
-  margin: 2rem 0rem;
+  margin-top: 2rem;
   border-radius: 2rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  border: none;
+  transition: all 0.3s;
+}
+
+article .summary button:hover {
+  background: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+  transition: all 0.3s;
 }
 
 article .summary p {
   color: hsl(224, 30%, 27%);
   font-weight: 800;
   font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 article .summary ul li .score span {
-  color: hsl(224, 30%, 27%);
+  color: #aaa7b4;
+  padding-left: 0.3rem;
+  font-weight: bold;
+}
+
+article .summary ul li > span {
+  text-align: center;
+  display: flex;
+  gap: 10px;
+  font-weight: bold;
 }
 
 .red-li {
-  background-color: hsla(0, 100%, 67%, 0.4);
+  background-color: #fff5f6;
+  color: hsl(0, 100%, 67%);
 }
 
 .red-li > span::before {
@@ -109,7 +153,8 @@ article .summary ul li .score span {
 }
 
 .orange-li {
-  background-color: hsla(39, 100%, 56%, 0.4);
+  background-color: #fefbf2;
+  color: hsl(39, 100%, 56%);
 }
 
 .orange-li > span::before {
@@ -117,7 +162,8 @@ article .summary ul li .score span {
 }
 
 .green-li {
-  background-color: hsla(166, 100%, 37%, 0.4);
+  background-color: #f2fafa;
+  color: hsl(166, 100%, 37%);
 }
 
 .green-li > span::before {
@@ -125,7 +171,8 @@ article .summary ul li .score span {
 }
 
 .blue-li {
-  background-color: hsla(234, 85%, 45%, 0.4);
+  background-color: #f3f3fd;
+  color: hsl(234, 85%, 45%);
 }
 
 .blue-li > span::before {
@@ -134,9 +181,8 @@ article .summary ul li .score span {
 
 article {
   display: flex;
-  box-shadow: 10px 10px 10px hsl(221, 100%, 96%);
+  box-shadow: 20px 20px 20px hsl(221, 100%, 96%);
   border-radius: 1rem;
-  max-width: 50rem;
 }
 
 @media (max-width: 860px) {
@@ -149,7 +195,7 @@ article {
   body {
     align-items: normal;
   }
-  article .purple-background {
+  article .total-score {
     max-width: 100%;
     border-top-left-radius: 0%;
     border-top-right-radius: 0%;
