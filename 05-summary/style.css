@@ -2,7 +2,6 @@
   margin: 0rem;
   padding: 0rem;
   transition: all 0.3s;
-
   font-family: "Hanken Grotesk", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -80,25 +79,18 @@ article .summary {
   font-size: 1.1rem;
 }
 
-article .summary ul {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
 article .summary ul li {
   list-style-type: none;
   border-radius: 0.5rem;
   padding: 1rem 0.5rem;
   padding-left: 1rem;
   display: flex;
-  position: relative;
+  justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
 article .summary ul li .score {
   color: #45404a;
-  position: absolute;
-  right: 0.5rem;
   font-weight: bold;
 }
 
@@ -121,6 +113,7 @@ article .summary button:hover {
     hsl(241, 81%, 54%)
   );
   transition: all 0.3s;
+  cursor: pointer;
 }
 
 article .summary p {
@@ -190,7 +183,6 @@ article {
     flex-direction: column;
     box-shadow: none;
     display: flex;
-    width: 100%;
   }
   body {
     align-items: normal;
@@ -201,17 +193,5 @@ article {
     border-top-right-radius: 0%;
     border-bottom-left-radius: 3rem;
     border-bottom-right-radius: 3rem;
-  }
-
-  article .summary ul {
-    padding: 0rem 1rem;
-  }
-
-  article .summary p,
-  article .summary button {
-    margin-left: 1rem;
-  }
-  article .summary button {
-    width: 90%;
   }
 }
