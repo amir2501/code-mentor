@@ -14,26 +14,24 @@ body {
   align-items: center;
   min-height: 100vh;
 }
-.container {
+section {
   border-radius: 1rem;
   display: flex;
-  flex-direction: row;
   background-color: hsl(244, 38%, 16%);
 }
 
-.img {
+.stats-image {
   background: linear-gradient(
       hsla(277, 80%, 45%, 0.45),
       hsla(277, 80%, 45%, 0.45)
     ),
     url("./images/image-header-desktop.jpg") no-repeat;
-  width: 530px;
+  width: 540px;
+  background-size: inherit;
   border-bottom-right-radius: 1rem;
   border-top-right-radius: 1rem;
 }
 .text-box {
-  display: flex;
-  flex-direction: column;
   padding: 4rem;
   padding-right: 5rem;
   color: hsla(0, 0%, 100%, 0.75);
@@ -71,13 +69,13 @@ body {
   color: hsla(0, 0%, 100%, 0.6);
 }
 
-@media (max-width: 860px) {
-  .container {
+@media (max-width: 1060px) {
+  section {
     flex-direction: column-reverse;
     margin: 4rem 0.5rem;
     max-width: 24rem;
   }
-  .img {
+  .stats-image {
     background: linear-gradient(
         hsla(277, 80%, 45%, 0.45),
         hsla(277, 80%, 45%, 0.45)
