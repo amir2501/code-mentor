@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <!-- Sign-up form start -->
+    <article class="" id="article">
+      <div class="text-box">
+        <h1>Stay updated!</h1>
+
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+        <form action="/submit">
+          <label for="email">Email address</label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="email@company.com"
+            required
+          />
+          <input
+            type="button"
+            value="Subscribe to monthly newsletter"
+            id="button"
+            onclick="subscribed()"
+          />
+        </form>
+      </div>
+      <picture>
+        <source
+          media="(max-width: 860px)"
+          srcset="./assets/images/illustration-sign-up-mobile.svg"
+        />
+        <img
+          src="./assets/images/illustration-sign-up-desktop.svg"
+          alt="desktop illustration-sign-up-desktop"
+          id="img"
+        />
+      </picture>
+    </article>
+
+    <!-- Sign-up form end -->
+
+    <!-- Success message start -->
+    <div class="subscribed-container hidden" id="subscribed-container">
+      <h1>Thanks for subscribing!</h1>
+      <p>
+        A confirmation email has been sent to
+        <span id="span"> ash@loremcompany.com </span>. Please open it and click
+        the button inside to confirm your subscription.
+      </p>
+      <input
+        type="button"
+        value="Dismiss message"
+        onclick="back_to_main_menu()"
+      />
+    </div>
+
+    <!-- Success message end -->
+  </body>
+  <script>
+    function subscribed() {
+      document.getElementById("article").classList.add("hidden");
+      document
+        .getElementById("subscribed-container")
+        .classList.remove("hidden");
+      var email = document.getElementById("email").value;
+      getElementById("span").innerHTML = email;
+    }
+    function back_to_main_menu() {
+      document.getElementById("article").classList.remove("hidden");
+      document.getElementById("subscribed-container").classList.add("hidden");
+    }
+  </script>
+</html>
