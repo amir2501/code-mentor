@@ -81,12 +81,12 @@ main ul li img{
   width: 80px;
 }
 
-main ul li:nth-child(1) {
+main ul li:nth-child(1), .blue {
 
   border-color: blue;
 }
 
-main ul li:nth-child(1)::before{
+main #option li:nth-child(1)::before{
   content: " ";
   width: 19rem;
   right: 40%;
@@ -96,11 +96,11 @@ main ul li:nth-child(1)::before{
   z-index: -1;
 }
 
-main ul li:nth-child(2) {
+main ul li:nth-child(2), .yellow {
   border-color: orange;
 }
 
-main ul li:nth-child(2)::before{
+main #option li:nth-child(2)::before{
   content: " ";
   width: 19rem;
   right: 6rem;
@@ -112,12 +112,12 @@ main ul li:nth-child(2)::before{
   z-index: -1;
 }
 
-main ul li:nth-child(3) {
+main ul li:nth-child(3), .red {
   border-color: red;
 }
 
 
-main ul li:nth-child(3)::before{
+main #option li:nth-child(3)::before{
   content: " ";
   width: 20rem;
   left: 6rem;
@@ -131,4 +131,11 @@ main ul li:nth-child(3)::before{
 
 main .hidden {
   display: none;
+}
+
+main #clicked .text-box {
+  display: flex;
+  min-width: 10vw;
+  justify-content: space-around;
+  color: white;
 }
