@@ -41,7 +41,7 @@
 
       <div class="score">
         <span>score</span>
-        <h2>12</h2>
+        <h2 id="score"></h2>
       </div>
     </header>
 
@@ -78,11 +78,21 @@
         </div>
 
          <ul>
-             <li>
-                 <img src="./images/icon-paper.svg" alt="" id="user_choose"  class=""/>
+
+
+             <li id="user_chose_li" class="">
+               <div class="gradient">
+               </div>
+               <img src="./images/icon-paper.svg" alt="" id="user_choose"  class=""/>
              </li>
 
-             <li>
+
+           <li>
+             <h2 id="user_status">Text</h2>
+             <button id="play_again">Play again</button>
+           </li>
+
+             <li id="computer_chose_li" class="">
                 <img src="./images/icon-paper.svg" alt="" id="random_img"  class=""/>
              </li>
           </ul>
