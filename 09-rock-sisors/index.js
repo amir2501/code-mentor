@@ -13,6 +13,8 @@ let win_status = false;
 let starter_count = 12;
 let user_status = document.getElementById("user_status");
 let status = "";
+let user_won = document.getElementById("user_won");
+let computer_won = document.getElementById("computer_won");
 
 score.innerHTML = `${starter_count}`
 
@@ -50,6 +52,9 @@ function check_winner(){
     computer_chose_li.classList.contains("yellow") && computer_chose_li.classList.remove("yellow");
     computer_chose_li.classList.contains("red") && computer_chose_li.classList.remove("red");
     computer_chose_li.classList.contains("blue") && computer_chose_li.classList.remove("blue");
+    computer_won.classList.contains("gradient") && computer_won.classList.remove("gradient");
+    user_won.classList.contains("gradient") && user_won.classList.remove("gradient");
+
 
 
     computer_chose === 0 && (random_img.src = "./images/icon-paper.svg") && (computer_chose_li.classList.add("blue"));
@@ -67,9 +72,9 @@ function check_winner(){
     (clicked_element === 3 &&  computer_chose === 2) && (win_status = "draw");
     (win_status && win_status !== "draw") && starter_count++;
     (!win_status && win_status !== "draw") && starter_count--;
-    (win_status === "draw") && ( status = "Draw");
-    (win_status === true) && ( status = "You win");
-    (win_status === false) && ( status = "You lose");
+    (win_status === "draw") && ( status = "Draw") && (user_won.classList.remove("gradient")) && (computer_won.classList.remove("gradient"));
+    (win_status === true) && ( status = "You win") && (user_won.classList.add("gradient"));
+    (win_status === false) && ( status = "You lose") && (computer_won.classList.add("gradient"));
     user_status.innerHTML = `${status}`
     score.innerHTML = `${starter_count}`;
     console.log(computer_chose);
