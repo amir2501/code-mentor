@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="./style.css">
+    <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+    />
+
+    <!--    fonts-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+    <!-- 
+  Score
+  Rules
+
+  You Picked
+  The House Picked
+
+  You Win
+  You Lose
+
+  Play Again -->
+</head>
+<body>
+<header>
+    <div class="info">
+        <h1>Rock</h1>
+        <h1>paper</h1>
+        <h1>Scissors</h1>
+    </div>
+
+    <div class="score">
+        <span>score</span>
+        <h2 id="score"></h2>
+    </div>
+</header>
+
+<main>
+    <ul id="option">
+
+        <li>
+            <img src="./images/icon-paper.svg" alt="" id="1"/>
+        </li>
+
+        <li>
+            <img src="./images/icon-scissors.svg" alt="" id="2"/>
+        </li>
+
+        <li>
+            <img src="./images/icon-rock.svg" alt="" id="3"/>
+        </li>
+
+    </ul>
+
+
+    <section class="hidden" id="clicked">
+
+        <div class="text-box">
+           <span>
+            You picked
+          </span>
+
+            <span>
+            computer picked
+          </span>
+        </div>
+
+        <ul>
+
+
+            <li id="user_chose_li" class="">
+                <div class="gradient" id="user_won">
+                </div>
+                <img src="./images/icon-paper.svg" alt="" id="user_choose" class=""/>
+            </li>
+
+
+            <li>
+                <h2 id="user_status">Text</h2>
+                <button id="play_again">Play again</button>
+            </li>
+
+            <li id="computer_chose_li" class="">
+                <div class="gradient" id="computer_won">
+                </div>
+                <img src="./images/icon-paper.svg" alt="" id="random_img" class=""/>
+            </li>
+        </ul>
+    </section>
+</main>
+
+<script src="./index.js"></script>
+</body>
+</html>
